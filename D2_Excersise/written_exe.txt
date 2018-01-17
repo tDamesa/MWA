@@ -1,0 +1,10 @@
+1. The reason we use setImmediate when we want to queue the function behind whatever I/O event
+ callbacks that are already in the event queue.   
+
+2. process.nextTick adds a callbacks to nextTick queue which is not a part of event loop. callbacks in nextTick 
+queue excuites immediately after the current function completes. It has no limit, all the callbacks get excuited 
+before moving to the next event loop phase. setImmediate schedules callbacks to run at chase phase of event loop. 
+Callbacks get excuited after I/O events' callbacks.  
+ 
+3.global.module, global.net,global.parseInt,global.setInterval,global.url,global.setImmediate,global.setTimeout,
+global.process, global.string_decoder,global.parseFloat, global.querystring
