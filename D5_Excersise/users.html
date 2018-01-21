@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #ccc;
+        }
+
+        th,
+        td,
+        table {
+            border: 1px solid #000;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Zip Code</th>
+                <th>Latitude</th>
+                <th>Longtude</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(function(user){ %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%=user.name  %></td>
+                    <td><%= user.username %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.address.city %></td>
+                    <td><%= user.address.zipcode  %></td>
+                    <td><%= user.address.geo.lat %></td>
+                    <td><%=user.address.geo.lng  %></td>
+                    <td><%= user.website %></td>                
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+</body>
+
+</html>
