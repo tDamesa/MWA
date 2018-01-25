@@ -1,0 +1,4 @@
+1.db.aggregate.agg([{$match:{state:"IA"}}])
+2.db.agg.aggregate([{$match:{$and:[{state:"IA"},{pop:{$lt:1000}}]}}])
+3.db.agg.aggregate([{$group:{_id:{city:"$city",state:"$state"},count:{$sum:1}}},{$match:{"count":{$gt:1}}}, {$sort:{"_id.state":1,"_id.city":1}}])
+4. db.agg.aggregate([{$group:{_id:{city:"$city",state:"$state"},pop:{$sum:"$pop"}}}, {$sort:{"_id.state":1,"pop":1}},{$group:{_id:{state:"$_id.state"},city:{$first:"$_id.city"},pop:{$first:"$pop"}}}])
