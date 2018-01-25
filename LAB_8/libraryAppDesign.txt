@@ -1,0 +1,29 @@
+//Book Information
+{
+  "_id": 0894,
+  "title": "The Pursuit of happiness",
+  "ISBN": "0060744871",
+  "author": {
+    "name": "Chris Gardner",
+    "email": "",
+    "phone": "",
+    "Address": {
+      "country": "",
+      "State": "",
+      "City": "",
+      "zip_code": ""
+    }
+  },
+  "checkInOutLog": [
+    { "stuName":"Teddy","studId": "8910","email": "teddy.me@gmail.com","phone": "8128349803","Address":{
+      "country": "USA",
+      "State": "FL",
+      "City": "Tampa",
+      "zip_code": "34546"
+  }, "checkoutDate": "01/15/2018", "checkinDate": "" }
+  ]
+}
+
+// I am thinking of creating two different indexs..
+1. FullText Index: so that the librarian should be able to search by book title
+2. Sparse Index: by checkoutDate when we need to search only the checked out books
