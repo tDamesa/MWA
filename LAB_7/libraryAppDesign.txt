@@ -1,0 +1,26 @@
+//Book Information
+{
+  "_id": 0894,
+  "title": "The Pursuit of happiness",
+  "ISBN": "0060744871",
+  "author": {
+    "name": "Chris Gardner",
+    "email": "",
+    "phone": "",
+    "Address": {
+      "country": "",
+      "State": "",
+      "City": "",
+      "zip_code": ""
+    }
+  },
+  "checkInOutLog": [
+    { "stuName":"Teddy","studId": "8910","email": "teddy.me@gmail.com","phone": "8128349803","Address":{
+      "country": "USA",
+      "State": "FL",
+      "City": "Tampa",
+      "zip_code": "34546"
+  }, "checkoutDate": "01/15/2018", "checkinDate": "" }
+  ]
+}
+
